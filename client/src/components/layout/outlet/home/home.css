@@ -1,0 +1,52 @@
+.home {
+  padding: 48px 56px;
+  color: #3f2d2d;
+}
+
+.home h2 {
+  color: #3f2d2d; 
+  font-size: 26px;
+  font-weight: 600;
+}
+.subtitle {
+  color: #8b6b6b;
+  margin-bottom: 36px;
+}
+
+
+hr {
+  border: none;
+  height: 1px;
+  background: #cd815e;
+  margin: 24px 0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.stat-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px;
+  border: 1px solid #f2d6cd;
+  box-shadow: 0 12px 30px rgba(227, 139, 117, 0.12);
+  transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+}
+
+.stat-card h4 {
+  color: #b46b6b;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.stat-card h2 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}

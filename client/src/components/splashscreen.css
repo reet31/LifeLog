@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.splash-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffe3d4; /* soft peach */
+}
+
+.splash-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 80px;
+  color: #ff8c69;
+  letter-spacing: 3px;
+  display: flex;
+}
+
+.char {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,82 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 182, 193, 0.3); 
+  backdrop-filter: blur(6px);           
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff0f5;         
+  border-radius: 20px;
+  width: 350px;
+  max-width: 90%;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.close-btn {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #ff69b4;
+}
+
+.modal h2 {
+  color: #ff69b4;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+
+.modal input {
+  width: 90%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  border: 1px solid #ffc0cb;
+  outline: none;
+  font-size: 1rem;
+}
+
+.modal button[type="submit"] {
+  width: 50%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 12px;
+  background-color: #ff69b4;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal button[type="submit"]:hover {
+  background-color: #ff85c1;
+}
+
+.closebtn{
+   
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color:white;
+    background-color: #ff85c1;
+}
