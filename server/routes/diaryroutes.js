@@ -26,10 +26,25 @@ router.get("/diary/kpis", authMiddleware, async (req, res) => {
       { $sort: { count: -1 } },
       { $limit: 1 },
     ]);
+
+
+    // count of each mood for bar chart
+
+    const MoodCountsagg = await Diary.aggregate([
+      { $match: { userId: new mongoose.Types.ObjectId(req.user.id) } },
+      { $group: { _id: "$mood", count: { $sum: 1 } } },
+    ]);
+    const moodCounts=MoodCountsagg.reduce((acc,curr)=>{{
+      acc[curr._id]=curr.count;
+      return acc;
+    }},{})
+    console.log("Mood Counts:", moodCounts);
+
     res.json({
       totalEntries,
       monthlyEntries,
       topMood: topMoodagg[0]?._id || null,
+      moodCounts,
     });
   }catch(err){
     console.log("❌ ERROR FETCHING KPIS:", err);
