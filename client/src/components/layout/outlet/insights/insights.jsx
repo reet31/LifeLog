@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import KpiCard from "./insightcard";
 import "./insights.css";
+import Calender from "./Calender.jsx";
 import {
   BarChart,
   Bar,
@@ -27,7 +28,16 @@ const DiaryKpis = () => {
 
     fetchKpis();
   }, []);
-
+  const [reflections,setreflections]=useState({});
+  useEffect(()=>{
+    axios.get("http://localhost:5000/api/diary/reflection",{withCredentials:true})
+    .then((response)=>{
+      setreflections(response.data);
+    })
+    .catch((error)=>{
+      console.error("Error fetching reflections:",error);
+    });
+  },[]);
   if (!kpis) return <p>Loading...</p>;
   const moodData = Object.entries(kpis.moodCounts || {}).map(
     ([mood, count]) => ({ mood, count })
@@ -35,25 +45,29 @@ const DiaryKpis = () => {
 
   return (
     <>
-  <div className="KpisSection">
     <h1>Insights</h1>
     <p className="subheading">Your diary at a glance — moods, entries, and more</p>
+  <div className="KpisSection">
+    
       
 
     <div className="KpisContainer">
-      <KpiCard title="Total Entries" value={kpis.totalEntries} />
+      <p>KPI Summary</p>
+      <div className="kpis">
+        <KpiCard title="Total Entries" value={kpis.totalEntries} />
       <KpiCard title="This Month" value={kpis.monthlyEntries} />
       <KpiCard title="Top Mood" value={(kpis.topMood==null)?"None":kpis.topMood} />
+      </div>
+      
     </div>
-    </div>
+   
 
-    <div className="MoodBreakdownSection">
-      <div className="MoodBreakdownContainer">
-        
+    
           <div className="MoodChartSection">
             <h2>Mood Distribution</h2>
-  <ResponsiveContainer width="50%" height={300}>
-    <BarChart data={moodData} margin={{ top: 20, right: 30, left: 20, bottom: 10 }}>
+  <ResponsiveContainer width="100%" height={300}>
+    <BarChart data={moodData} margin={{ top: 20, right: 30, left: 20, bottom: 10 }}
+    barCategoryGap="55%">
     <CartesianGrid strokeDasharray="3 3" />
     <XAxis dataKey="mood" tick={{ fontSize: 18 }} />
     <YAxis allowDecimals={false} domain={[0, "dataMax + 1"]} />
@@ -69,9 +83,20 @@ const DiaryKpis = () => {
   </BarChart>
 </ResponsiveContainer>
 
-      </div>
-      </div>  
+      
+      
     </div>
+    <div className="CalenderSection">
+      <Calender />
+    </div>
+    <div className="ReflectionSection">
+      <h2>Reflection</h2>
+      <p>🔥 Longest streak: {reflections.longeststreak} days</p>
+<p>📅 Most active day: {reflections.mostactivedays}</p>
+<p>🌱 Consistency score: {reflections.consistencyscore}%</p>
+
+    </div>
+     </div>
     </>
 )
 };

@@ -24,7 +24,7 @@
 
 .sidebar {
   width: 240px;
-  height: 100vh;
+  height: (100vh-120px);
   background: linear-gradient(#f7b39b, #f9c5b3);
   display: flex;
   flex-direction: column;

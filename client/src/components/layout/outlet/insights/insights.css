@@ -11,11 +11,20 @@
 }
 
 .KpisSection {
+  display: grid;
+  height: calc(100vh - 120px);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.6fr 1.4fr 0.8fr;
+
+  gap: 24px;
+
   padding: 40px 60px 20px;
   background: var(--bg-blush);
+  
 }
 
-.KpisSection h1 {
+
+ h1 {
   font-size: 2.4rem;
   font-weight: 600;
   color: var(--text-main);
@@ -29,49 +38,72 @@
 }
 
 .KpisContainer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-/* ===== KPI CARD ===== */
-.card-container {
-  background: #ffffff;
-  width: 280px;
-  padding: 24px 28px;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  align-self: start;
+  background-color: #ca3567;
+  width: 100%;
+  padding: 20px;
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card-container:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+.KpisContainer p {
+  font-size: 1.2rem;
+  font-weight:700;
 }
-.kpi-card {
-  background: var(--card-bg);
+.kpis{
+  display: flex;
+  gap:1rem;
+  margin-top: 0.7rem;
+}
+
+
+/* Chart card container */
+.MoodChartSection {
+   grid-column: 2 / 3;
+  grid-row: 1 / span 2;
+  grid-row :span 2;
+  width: 100%;
+  padding: 24px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.75),
+    rgb(233, 188, 216)
+  );
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
   border-radius: 22px;
-  padding: 26px 30px;
-  box-shadow: 0 10px 30px rgba(238, 141, 173, 0.12);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+  transition: 0.3s ease;
 }
 
-.kpi-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 40px rgba(238, 141, 173, 0.18);
+
+/* Hover floating effect */
+.MoodChartSection:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 14px 36px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
-.kpi-card h3 {
-  font-size: 0.9rem;
-  color: var(--accent-pink);
-  margin-bottom: 12px;
-  font-weight: 500;
+
+/* Section heading */
+.MoodChartSection h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #2c2c2c;
 }
 
-.kpi-card h2 {
-  font-size: 2rem;
-  color: var(--text-main);
-}
+
 .recharts-cartesian-grid-horizontal line,
 .recharts-cartesian-grid-vertical line {
   stroke: rgba(0, 0, 0, 0.06);
@@ -89,4 +121,55 @@
   padding: 10px 14px;
   color: var(--text-main);
 }
+/*calender css*/
+.CalenderSection {
+  
+   grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.calendar-container {
+  background-color: #f7cfc9;
+  padding: 20px;
+  border-radius: 12px;
+align-self: start;
+  width: 100%;
+  max-width: 800px;
 
+  overflow: hidden; /* important */
+}
+.calendar-scroll {
+  width: 20%;
+  overflow-x: auto;
+}
+.react-calendar-heatmap {
+  display: inline-block;
+  min-width: 70px; /* adjust if needed */
+}
+
+.react-calendar-heatmap {
+    width: 100%;
+}
+
+.react-calendar-heatmap svg {
+    width: 100%;
+    height: auto;
+}
+
+.react-calendar-heatmap .color-empty {
+  fill: #f6e4de;
+}
+
+.react-calendar-heatmap .color-scale-1 {
+  fill: #ffb7a5;
+}
+
+.react-calendar-heatmap .color-scale-2 {
+  fill: #ff8c7a;
+}
+
+.react-calendar-heatmap .color-scale-3 {
+  fill: #ff6b6b;
+}
+.ReflectionSection{
+  grid-row: 3 / 4;
+}

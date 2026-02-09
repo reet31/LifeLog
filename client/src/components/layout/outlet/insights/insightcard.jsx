@@ -1,5 +1,5 @@
 import React from "react";
-import "./insights.css";
+import "./insightscard.css";
 const KpiCard = ({ title, value }) => (
   <div className="card-container">
     <p className="card-containerp">{title}</p>

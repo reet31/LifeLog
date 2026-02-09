@@ -1,0 +1,51 @@
+.card-container {
+  width: 180px;
+  padding: 18px 20px;
+
+  /* Glass white effect */
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0.45)
+  );
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-radius: 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+  transition: all 0.3s ease;
+}
+
+
+/* Hover effect for premium feel */
+.card-container:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+
+/* Title text */
+.card-containerp:first-child {
+  font-size: 14px;
+  color: #7a7a7a;
+  margin: 0;
+  font-weight: 500;
+}
+
+
+/* Value text */
+.card-containerp:last-child {
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 6px;
+  color: #2b2b2b;
+}
