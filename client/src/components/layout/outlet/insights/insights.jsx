@@ -48,9 +48,6 @@ const DiaryKpis = () => {
     <h1>Insights</h1>
     <p className="subheading">Your diary at a glance — moods, entries, and more</p>
   <div className="KpisSection">
-    
-      
-
     <div className="KpisContainer">
       <p>KPI Summary</p>
       <div className="kpis">
@@ -60,9 +57,6 @@ const DiaryKpis = () => {
       </div>
       
     </div>
-   
-
-    
           <div className="MoodChartSection">
             <h2>Mood Distribution</h2>
   <ResponsiveContainer width="100%" height={300}>
@@ -91,9 +85,10 @@ const DiaryKpis = () => {
     </div>
     <div className="ReflectionSection">
       <h2>Reflection</h2>
+      <br></br>
       <p>🔥 Longest streak: {reflections.longeststreak} days</p>
-<p>📅 Most active day: {reflections.mostactivedays}</p>
-<p>🌱 Consistency score: {reflections.consistencyscore}%</p>
+      <p>📅 Most active day: {reflections.mostactivedays}</p>
+      <p>🌱 Consistency score: {reflections.consistencyscore}%</p>
 
     </div>
      </div>

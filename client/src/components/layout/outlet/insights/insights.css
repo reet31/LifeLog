@@ -15,15 +15,10 @@
   height: calc(100vh - 120px);
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.6fr 1.4fr 0.8fr;
-
   gap: 24px;
-
   padding: 40px 60px 20px;
   background: var(--bg-blush);
-  
 }
-
-
  h1 {
   font-size: 2.4rem;
   font-weight: 600;
@@ -41,7 +36,20 @@
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   align-self: start;
-  background-color: #ca3567;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0.45)
+  );
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
   width: 100%;
   padding: 20px;
   border-radius: 20px;
@@ -56,11 +64,8 @@
   gap:1rem;
   margin-top: 0.7rem;
 }
-
-
-/* Chart card container */
 .MoodChartSection {
-   grid-column: 2 / 3;
+  grid-column: 2 / 3;
   grid-row: 1 / span 2;
   grid-row :span 2;
   width: 100%;
@@ -68,20 +73,15 @@
   background: linear-gradient(
     145deg,
     rgba(255, 255, 255, 0.75),
-    rgb(233, 188, 216)
+    rgba(255, 255, 255, 0.45)
   );
-
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-
-  border-radius: 22px;
-
+  border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.35);
-
   box-shadow:
-    0 8px 28px rgba(0, 0, 0, 0.08),
+    0 8px 24px rgba(0, 0, 0, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.6);
-
   transition: 0.3s ease;
 }
 
@@ -91,7 +91,7 @@
   transform: translateY(-5px);
   box-shadow:
     0 14px 36px rgba(0, 0, 0, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    inset 0 1px 0 rgba(209, 209, 209, 0.7);
 }
 
 
@@ -114,7 +114,7 @@
 }
 
 .recharts-default-tooltip {
-  background-color: white !important;
+  background-color: rgb(205, 192, 192) !important;
   border-radius: 12px !important;
   border: none !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
@@ -123,12 +123,11 @@
 }
 /*calender css*/
 .CalenderSection {
-  
-   grid-column: 1 / 2;
+  grid-column: 1 / 2;
   grid-row: 2 / 3;
 }
 .calendar-container {
-  background-color: #f7cfc9;
+  background-color: #fffffff0;
   padding: 20px;
   border-radius: 12px;
 align-self: start;
@@ -136,6 +135,12 @@ align-self: start;
   max-width: 800px;
 
   overflow: hidden; /* important */
+}
+.calendar-container:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 14px 36px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(209, 209, 209, 0.7);
 }
 .calendar-scroll {
   width: 20%;
@@ -172,4 +177,30 @@ align-self: start;
 }
 .ReflectionSection{
   grid-row: 3 / 4;
+}
+.ReflectionSection{
+padding: 5px 20px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0.45)
+  );
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-radius: 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+}
+.ReflectionSection:hover{
+  transform: translateY(-5px);
+  box-shadow:
+    0 14px 36px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(209, 209, 209, 0.7);
 }

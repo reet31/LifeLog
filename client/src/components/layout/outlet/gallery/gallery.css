@@ -109,4 +109,15 @@
   opacity: 1;
   transform: scale(1);
 }
+.gallery-grid::-webkit-scrollbar {
+  width: 6px;
+} 
+.gallery-grid::-webkit-scrollbar-track {
+  background: #fde8e1;         
+  border-radius: 10px;
+}
+.gallery-grid::-webkit-scrollbar-thumb {
+  background: #f4b7a6;        
+  border-radius: 10px;
+}
 

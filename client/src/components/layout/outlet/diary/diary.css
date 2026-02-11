@@ -1,4 +1,7 @@
 .diary-page {
+   height: 100vh;
+  display: flex;
+  flex-direction: column;
   padding: 30px;
   background: linear-gradient(135deg, #fff1ea, #fde2d6);
 }
@@ -34,7 +37,8 @@
   cursor: pointer;                            
   color: white;                           
 }                             
-.diary-grid {                                 
+.diary-grid { 
+  height:100vh;                                
   margin-top: 20px;             
   display: grid;                                            
   grid-template-columns: repeat(auto-fill, 200px);                      
@@ -43,16 +47,25 @@
   overflow-y: auto;                                       
   padding-right: 10px;                              
 }
+
 .diary-grid::-webkit-scrollbar {
   width: 6px;
 }
+
 .diary-grid::-webkit-scrollbar-track {
-  background: transparent;
-}
-.diary-grid::-webkit-scrollbar-thumb {
-  background: #ffb7a5;
+  background: #fde8e1;         
   border-radius: 10px;
 }
+
+.diary-grid::-webkit-scrollbar-thumb {
+  background: #f4b7a6;          /* darker peach */
+  border-radius: 10px;
+}
+
+.diary-grid::-webkit-scrollbar-thumb:hover {
+  background: #e89a85;
+}
+
 .diary-card {
   width: 200px;
   height: 200px;

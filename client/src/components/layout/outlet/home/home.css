@@ -50,3 +50,10 @@ hr {
   font-size: 22px;
   margin-bottom: 6px;
 }
+.typing-container {
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  color: #7a3e2e;
+  margin-bottom: 25px;
+}
