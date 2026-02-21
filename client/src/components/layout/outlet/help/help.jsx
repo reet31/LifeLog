@@ -8,7 +8,7 @@
 import React from 'react'
 import "./help.css"
 import emailjs from '@emailjs/browser'
-import { FaBook, FaQuestionCircle, FaEnvelope, FaBug } from "react-icons/fa"
+import { FaBook, FaQuestionCircle,FaBug } from "react-icons/fa"
 import { FaUserPlus, FaSignInAlt, FaPen, FaCalendarAlt, FaSeedling } from "react-icons/fa"
 const Help = () => {
     const sendBugReport = (e) => {

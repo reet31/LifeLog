@@ -4,7 +4,6 @@ import AffirmationCard from "./affirmationcard";
 import { useState,useEffect } from "react";
 
 
-const API_URL = "https://dummyjson.com/quotes/random";
 
 
 const Affirmations = () => {
