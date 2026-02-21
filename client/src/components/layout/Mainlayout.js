@@ -7,7 +7,7 @@ const MainLayout = () => {
     <div className="layout">
       <Sidebar />
       <main className="main-content">
-        <Outlet />   {/* child compo */}
+        <Outlet />   
       </main>
     </div>
   );

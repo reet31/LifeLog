@@ -1,0 +1,155 @@
+.help{
+    min-height:100vh;
+    padding:30px 20px;
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg,#fff1eb,#f7d9c4,#f5cfc2);
+    color:#5a3e36;
+}
+
+/* TITLE */
+.title{
+    margin-bottom:25px;
+}
+
+.title h1{
+    font-size:42px;
+    margin-bottom:5px;
+    color:#6b4a43;
+}
+
+.title p{
+    color:#9a7b73;
+    font-size:16px;
+}
+
+/* PEACH BENTO CARDS */
+.what-is-lifelog,
+.how-to-use,
+.contact-us,
+.reportanissue{
+    background:#f9e4da;
+    border-radius:24px;
+    padding:24px;
+    margin-bottom:20px;
+
+    border:1px solid #f1cfc2;
+    box-shadow:0 6px 18px rgba(200,150,130,0.15);
+
+    transition:0.25s ease;
+}
+
+/* HOVER */
+.what-is-lifelog:hover,
+.how-to-use:hover,
+.contact-us:hover,
+.reportanissue:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 24px rgba(200,150,130,0.22);
+}
+
+/* HEADINGS */
+h2{
+    margin-bottom:12px;
+    color:#7a5147;
+}
+
+/* TEXT */
+.how-to-use p{
+
+    margin:6px 30px;
+    color:#6b4a43;
+}
+
+/* FORMS */
+.contact-form,
+.report-form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-top:10px;
+}
+
+/* INPUTS */
+input,
+textarea{
+    padding:12px;
+    border-radius:14px;
+    border:1px solid #efd2c7;
+    background:#fff7f3;
+    font-family:inherit;
+}
+
+/* TEXTAREA */
+textarea{
+    min-height:100px;
+    resize:none;
+}
+
+/* BUTTON */
+button{
+    margin-top:8px;
+    padding:12px;
+    border-radius:14px;
+    border:none;
+
+    background:#e6a18f;
+    color:white;
+    font-weight:bold;
+    font-size:15px;
+
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    background:#d88f7d;
+    transform:translateY(-2px);
+}
+
+
+/* RESPONSIVE BENTO */
+
+/* Tablet */
+@media (min-width:700px){
+
+    .help{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:20px;
+    }
+
+    .title{
+        grid-column:span 2;
+    }
+
+    .what-is-lifelog{
+        grid-column:span 2;
+    }
+
+    .how-to-use{
+        grid-column:span 2;
+    }
+}
+
+.icon{
+    margin-right:10px;
+    color:#d88f7d;
+    font-size:20px;
+    vertical-align:middle;
+}
+/* Desktop */
+@media (min-width:1000px){
+
+    .help{
+        padding:40px 80px;
+        gap:25px;
+    }
+
+    .contact-us{
+        grid-column:1;
+    }
+
+    .reportanissue{
+        grid-column:2;
+    }
+}

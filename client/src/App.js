@@ -10,6 +10,7 @@ import Diary from "./components/layout/outlet/diary/diary";
 import Gallery from "./components/layout/outlet/gallery/gallery";
 import Affirmations from "./components/layout/outlet/Affirmations/affirmation";
 import Insights from "./components/layout/outlet/insights/insights";
+import Help from "./components/layout/outlet/help/help";
 import ProtectedRoute from "./protectedroutes";
 import { checkauthentication } from "./utils/auth";
 
@@ -58,7 +59,7 @@ function App() {
           <Route path="gallery" element={<Gallery />} />
           <Route path="affirmations" element={<Affirmations />} />
           <Route path="insights" element={<Insights />} />
-          {/* add others later */}
+          <Route path="help" element={<Help/>} />
         </Route>
       </Route>
     </Routes>
