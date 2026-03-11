@@ -222,12 +222,7 @@ Resources and tools that helped build this project:
 - Online tutorials
 - Open source libraries
 
----
 
-## ⭐ Support
-
-If you like this project, consider giving it a star ⭐ on GitHub.
-It helps others discover the project!
 
 ---
 
